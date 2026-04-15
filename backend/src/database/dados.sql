@@ -1,0 +1,11 @@
+CREATE DATABASE escola_db;
+USE escola_db;
+
+CREATE TABLE alunos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    idade INT NOT NULL,
+    curso VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
